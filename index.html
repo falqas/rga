@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- <html class="no-js">  -->
+<html ng-app = "myApp">
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+<script src = "./lib/angular.js"></script>
+<head>
+
+<!-- Meta-Information -->
+
+
+<!-- Website CSS Styles -->
+<link rel="stylesheet" href="./css/main.css">
+
+<title>MST3K</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
+
+</head>
+<!-- <script src="angular.min.js"></script> -->
+
+<body>
+<!--[if lt IE 7]>
+<![endif]-->
+<header>
+<div class="logo"><div>
+<img class = "logo" src="./assets/Background copy 2.jpg">
+
+</header>
+
+<div class = "title">
+  <img src="./assets/The_Early_Days_ARCH_R4.jpg">
+</div>
+<div class = "title">
+  <img src="./assets/MST3K.jpg">
+</div>
+
+
+<img src="./assets/Background copy.jpg" class="splash">
+
+<p class="copy">In the not-too-distant future, next Sunday, AD There was a man. There were some puppets. It was amazing. These are the experiments of the SOL.</p>
+
+
+<div ng-controller="exhibitsCtrl" class="exhibits">
+    <div ng-repeat="exhibit in exhibits">
+        <img ng-src="./assets/{{exhibit}}" alt="{{exhibit}}" class = "exhibit"/>
+    </div>
+</div>
+
+
+
+<!-- Javascript -->
+
+<script src = "./js/app.js"></script>
+<script src = "./js/controllers.js"></script>
+
+
+</body>
+</html>
