@@ -145,7 +145,7 @@ footer #back-to-top {
   text-decoration: none;
   padding-right: 40px;
   margin-right: 40px;
-  background: url(../images/chevron_up.a7454193.png) right 6px no-repeat;
+  background: url(../assets/tri.png) right 6px no-repeat;
   display: block;
   position: relative;
   top: 50%;
@@ -311,20 +311,22 @@ footer #social-small #social-small-youtube:hover {
     top: auto;
     bottom: 0; } }
 #exhibit {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  padding: 0px; }
 
 #exhibits {
   margin: 10px 10px 10px 10px;
   margin-top: 10px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  padding: 0px; }
 
 #exhibits section {
   position: relative;
   margin-bottom: 20px; }
 
 #exhibits section a {
-  padding-right: 35px;
-  background: url(../images/arrow_right.711c6f08.png) right center no-repeat; }
+  margin-right: 35px;
+  background: url("../assets/Circle Arrow 30PX SOLID copy.png") right center no-repeat; }
 
 #exhibits section .text-block:hover,
 .video-modal {
@@ -336,7 +338,7 @@ footer #social-small #social-small-youtube:hover {
   position: absolute;
   left: 55px;
   bottom: 48px;
-  padding: 20px;
+  margin: 20px;
   cursor: pointer;
   -webkit-transition: background-color .5s ease-out;
   transition: background-color 0.5s ease-out; }
@@ -386,6 +388,60 @@ footer #social-small #social-small-youtube:hover {
   opacity: 1;
   -webkit-transition: opacity linear .5s;
   transition: opacity linear 0.5s; }
+
+.overlay {
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  cursor: pointer;
+  height: 0%; }
+
+.poster-wrapper:hover .overlay {
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  height: 100%; }
+
+.bottom-image-desc {
+  bottom: 0px;
+  color: white;
+  left: 0px;
+  width: 100%;
+  margin: 0;
+  z-index: 20;
+  padding: 5px 25px;
+  position: absolute;
+  background: -webkit-gradient(linear, 0% 100%, 0% 100%, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+  background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9)); }
+
+.bottom-image-h2 {
+  font-size: 40px;
+  font-family: 'Roboto Slab', serif; }
+
+.poster-wrapper:hover .bottom-image-desc {
+  bottom: 40%;
+  text-align: center;
+  background: none;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
+
+.poster-wrapper:hover .bottom-image-h2 {
+  font-size: 36px; }
+
+.bottom-image-link, .explore-icon {
+  color: #3B86FF;
+  font-weight: bold; }
+
+.bottom-image-link > a:hover {
+  text-decoration: none;
+  color: #3B86FF; }
 
 .video-modal .video-modal-close {
   color: #FFF;

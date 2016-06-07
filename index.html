@@ -17,7 +17,7 @@
 </head>
 <!-- <script src="angular.min.js"></script> -->
 
-<body>
+<body ng-controller="exhibitsCtrl" class="exhibits">
     <!--[if lt IE 7]>
 <![endif]-->
     <header>
@@ -48,15 +48,64 @@
             <img id="look" src="./assets/Look_What_We_Found.png">
         </div>
     </div>
-    <div class="row angular-block">
+<!--     <div class="row angular-block">
         <div class="image-blocks">
             <div ng-controller="exhibitsCtrl" class="exhibits">
                 <div class="col-xs-12 col-sm-4 img-1 ng-scope" ng-repeat="exhibit in exhibits">
+                <div class="text-block" ng-click="openVideoModal(exhibit.videoId)">
+                        <h2 class="ng-binding">Season 0 KTMA</h2> <a>EXPLORE</a>
                     <img ng-src="./assets/{{exhibit}}" alt="{{exhibit}}" id="exhibit" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+ -->
+
+<div class="row angular-block">
+<!-- <div class="image-blocks" ng> -->
+<div class="image-blocks">
+
+
+
+<div class="col-xs-12 col-sm-4 <i></i>mg-1" ng-repeat="exhibit in exhibits">
+    <div class="poster-wrapper" data-toggle="modal" data-target="#videoModal" alt="{{exhibit.youtubeId}}" ng-click="updateVideo(exhibit.youtubeId)">
+        <img class="bottom-img .responsive-image" ng-src="./assets/{{exhibit.image}}" alt="Bottom Image 1">
+        <div class="overlay"></div>
+        <div class="bottom-image-desc">
+        <h2>{{exhibit.name}}</h2>
+        <p class="bottom-image-link" alt="{{exhibit.name}}">EXPLORE &nbsp;<i class="explore-icon fa fa-arrow-circle-right fa-lg"></i> </p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="videoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" ng-click="removeVideo()">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="video-container">
+            <iframe class="modal-video" src="" width="560" height="315" ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
     <footer class="ng-scope">
         <div class="row">
             <div id="social-big-wrapper">
